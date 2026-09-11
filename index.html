@@ -6,7 +6,7 @@
 <title>Tacos 801 | Authentic Street Tacos in Salt Lake City</title>
 <meta name="description" content="Tacos 801 serves authentic street tacos — carne asada, al pastor, carnitas — on Salt Lake City's west side. Call (801) 906-0136 to order.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231c1a17'/%3E%3Cpath d='M25 42h50l-4 8a20 20 0 0 1-42 0z' fill='%23ff7a2f'/%3E%3Crect x='25' y='48' width='50' height='8' fill='%23f2e6c9'/%3E%3C/svg%3E">
-<link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero.webp" imagesrcset="images/hero-mobile.webp 900w, images/hero.webp 2200w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -153,7 +153,10 @@ html.js .rv.in{opacity:1;transform:none}
 </header>
 
 <section class="hero" id="top" aria-label="Welcome">
-  <img class="hero-bg" src="images/hero.webp" alt="Spread of authentic street tacos with salsas and limes on a wooden table" loading="eager" fetchpriority="high">
+  <picture>
+    <source media="(max-width: 820px)" srcset="images/hero-mobile.webp">
+    <img class="hero-bg" src="images/hero.webp" alt="Spread of authentic street tacos with salsas and limes on a wooden table" loading="eager" fetchpriority="high">
+  </picture>
   <div class="hero-shade"></div>
   <div class="hero-inner">
     <p class="kicker">Salt Lake City · West Side</p>
