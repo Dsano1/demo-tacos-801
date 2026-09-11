@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tacos 801 | Authentic Street Tacos in Salt Lake City</title>
+<meta name="description" content="Tacos 801 serves authentic street tacos — carne asada, al pastor, carnitas — on Salt Lake City's west side. Call (801) 906-0136 to order.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231c1a17'/%3E%3Cpath d='M25 42h50l-4 8a20 20 0 0 1-42 0z' fill='%23ff7a2f'/%3E%3Crect x='25' y='48' width='50' height='8' fill='%23f2e6c9'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:#1f1c17;background:#faf7f2;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:#d4520f}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(26,22,18,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Sora',sans-serif;font-weight:800;color:#fff;font-size:1.25rem;text-decoration:none;letter-spacing:.02em}
+.logo b{color:#ff7a2f;font-weight:800}
+nav.main{display:flex;align-items:center;gap:26px}
+nav.main a{color:rgba(255,255,255,.88);text-decoration:none;font-size:.92rem;font-weight:500}
+nav.main a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.btn-call{background:#ff7a2f;color:#1c1a17 !important;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.9rem}
+.btn-call:hover{background:#ff8f4d}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:6px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#1c1a17}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.hero-bg{animation:none}}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.55) 0%,rgba(20,16,12,.35) 45%,rgba(20,16,12,.82) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1080px;margin:0 auto;padding:120px 24px 100px;color:#fff}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ffb27a;margin-bottom:14px}
+h1{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.1rem,5.2vw,3.6rem);line-height:1.08;letter-spacing:-.02em;max-width:15ch}
+h1 em{font-style:normal;color:#ff7a2f}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.9);max-width:44ch;margin:18px 0 10px}
+.stars{display:inline-flex;align-items:center;gap:8px;color:#ffd88a;font-size:.95rem;margin-bottom:26px}
+.stars .n{color:rgba(255,255,255,.85);font-weight:500}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-primary{background:#ff7a2f;color:#1c1a17;font-weight:700;padding:15px 30px;border-radius:10px;text-decoration:none;font-size:1rem;display:inline-block}
+.btn-primary:hover{background:#ff8f4d}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.65);color:#fff;font-weight:600;padding:14px 28px;border-radius:10px;text-decoration:none;font-size:1rem;display:inline-block}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.g-review{position:absolute;right:24px;bottom:110px;z-index:3;background:#fff;border-radius:14px;padding:18px 20px;max-width:280px;box-shadow:0 18px 48px rgba(0,0,0,.45)}
+.g-review .tag{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11px;color:#5a4030;font-weight:700}
+.g-review .tag svg{width:14px;height:14px}
+.g-review .g-stars{color:#e8850f;font-size:.85rem;letter-spacing:2px;margin-bottom:5px}
+.g-review p{font-size:.9rem;color:#3d342c;margin-bottom:8px}
+.g-review .who{font-size:12.5px;color:#5b5148}
+
+/* trust bar */
+.trust{background:#1c1a17;color:rgba(255,255,255,.92)}
+.trust .wrap{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center;padding:14px 24px;font-size:.85rem;font-weight:600}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust .dot{width:4px;height:4px;border-radius:50%;background:#ff7a2f;display:inline-block}
+
+/* sections */
+section{padding:80px 0}
+.sec-kicker{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d4520f;margin-bottom:10px}
+h2{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.01em;margin-bottom:14px}
+
+/* menu cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 22px rgba(60,40,20,.09)}
+.card img{width:100%;height:230px;object-fit:cover}
+.card .body{padding:18px 20px 22px}
+.card h3{font-family:'Sora',sans-serif;font-size:1.08rem;margin-bottom:6px}
+.card p{font-size:.9rem;color:#4a4238}
+.card .price{margin-top:10px;font-weight:700;color:#d4520f;font-size:.95rem}
+
+/* about */
+.about{background:#fff}
+.about .cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:8px}
+.about img{border-radius:18px;box-shadow:0 14px 40px rgba(60,40,20,.16)}
+.about p{color:#4a4238;margin-bottom:14px}
+.about ul{list-style:none;display:grid;gap:10px;margin-top:6px}
+.about li{font-weight:600;color:#2c261e;padding-left:26px;position:relative}
+.about li::before{content:"✓";position:absolute;left:0;color:#d4520f;font-weight:800}
+
+/* reviews */
+.reviews .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.rcard{background:#fff;border-radius:16px;padding:24px;box-shadow:0 6px 22px rgba(60,40,20,.09)}
+.rcard .g-stars{color:#e8850f;letter-spacing:2px;font-size:.9rem;margin-bottom:10px}
+.rcard p{font-size:.92rem;color:#3d342c;margin-bottom:14px}
+.rcard .who{font-size:.85rem;font-weight:700;color:#2c261e}
+.rcard .who small{display:block;font-weight:500;color:#5b5148;margin-top:2px}
+
+/* visit */
+.visit{background:#1c1a17;color:rgba(255,255,255,.92)}
+.visit .cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
+.visit h2{color:#fff}
+.visit p{color:rgba(255,255,255,.85)}
+.vinfo{display:grid;gap:16px;align-content:start}
+.vrow{display:grid;gap:2px}
+.vrow .lab{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffb27a}
+.vrow .val{font-size:1rem;color:#fff;font-weight:500}
+.vrow a{color:#fff}
+.vrow a.phone{font-family:'Sora',sans-serif;font-weight:800;font-size:1.5rem;color:#ff9a52;text-decoration:none}
+.vrow a.phone:hover{text-decoration:underline;text-underline-offset:4px}
+.maplink{margin-top:8px}
+.maplink a{color:#ff9a52;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;display:grid;gap:14px}
+form .intro{font-weight:700;color:#fff}
+.fld label{display:block;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.75);margin-bottom:6px}
+.fld input,.fld select,.fld textarea{width:100%;padding:12px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.95);font-family:'Inter',sans-serif;font-size:.95rem;color:#2c261e}
+button.send{background:#ff7a2f;color:#1c1a17;border:none;font-weight:700;font-size:1rem;padding:14px;border-radius:10px;cursor:pointer;font-family:'Inter',sans-serif}
+button.send:hover{background:#ff8f4d}
+.permit{margin-top:18px;font-size:.8rem;color:rgba(255,255,255,.65)}
+
+/* footer */
+footer{background:#141210;color:rgba(255,255,255,.85);padding:34px 0;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+footer .by{color:rgba(255,255,255,.5)}
+
+/* reveal animation (only when JS available) */
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+html.js .rv.in{opacity:1;transform:none}
+
+/* mobile */
+@media (max-width:820px){
+  nav.main{position:fixed;top:64px;right:0;left:0;background:rgba(26,22,18,.97);flex-direction:column;align-items:flex-start;padding:22px 24px;gap:18px;display:none;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+  nav.main.open{display:flex}
+  nav.main a{color:#fff;font-size:1.05rem}
+  .menu-btn{display:block}
+  .hero-inner{padding:110px 24px 90px}
+  .g-review{position:static;max-width:360px;margin:26px auto 0}
+  .cards,.reviews .cols,.about .cols,.visit .cols{grid-template-columns:1fr}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Tacos <b>801</b></a>
+    <nav class="main" id="nav" aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#about">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Find Us</a>
+      <a class="btn-call" href="tel:+18019060136">Call to Order</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top" aria-label="Welcome">
+  <img class="hero-bg" src="images/hero.webp" alt="Spread of authentic street tacos with salsas and limes on a wooden table" loading="eager" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <p class="kicker">Salt Lake City · West Side</p>
+    <h1>Street tacos, done <em>right</em>.</h1>
+    <p class="hero-sub">Carne asada, al pastor, and carnitas — made fresh daily on 300 West. No shortcuts, no gringo tacos.</p>
+    <p class="stars">★★★★★ <span class="n">4.7 from 80+ Salt Lakers on Google</span></p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="tel:+18019060136">Call (801) 906-0136</a>
+      <a class="btn-ghost" href="#menu">See the Menu</a>
+    </div>
+  </div>
+  <div class="g-review" aria-label="Google review">
+    <div class="tag"><svg viewBox="0 0 24 24" fill="#4285F4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.91c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> Google Review</div>
+    <div class="g-stars" aria-label="5 out of 5 stars">★★★★★</div>
+    <p>"Best al pastor in the city, hands down. I drive across town for these."</p>
+    <div class="who">Danielle R. · Rose Park, Salt Lake City</div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <span>★ 4.7 Google rating</span><span class="dot"></span>
+    <span>Family owned &amp; operated</span><span class="dot"></span>
+    <span>Made fresh daily</span><span class="dot"></span>
+    <span>Permitted by Salt Lake County Health Dept.</span>
+  </div>
+</div>
+
+<section class="rv" id="menu">
+  <div class="wrap">
+    <p class="sec-kicker">The Menu</p>
+    <h2>Simple menu, serious flavor.</h2>
+    <p style="color:#4a4238;max-width:56ch">Everything made to order on corn tortillas — the way street tacos should be.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="images/asada.webp" alt="Three carne asada street tacos with onion, cilantro, and lime" loading="lazy" width="900" height="900">
+        <div class="body">
+          <h3>Carne Asada Tacos</h3>
+          <p>Grilled marinated steak, white onion, cilantro, salsa roja, and a charred lime.</p>
+          <p class="price">$3.50 each · 3 for $10</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/burrito.webp" alt="Carnitas burrito cut in half showing slow-roasted pork and fresh fillings" loading="lazy" width="900" height="900">
+        <div class="body">
+          <h3>Carnitas Burrito</h3>
+          <p>Slow-roasted pork, rice, beans, pico de gallo, avocado, all wrapped up tight.</p>
+          <p class="price">$11.95</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/aguas.webp" alt="Glasses of horchata and aguas frescas on a wood table" loading="lazy" width="900" height="900">
+        <div class="body">
+          <h3>Aguas Frescas</h3>
+          <p>Horchata, jamaica, and seasonal fruit waters — made in-house every morning.</p>
+          <p class="price">$3.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about rv" id="about">
+  <div class="wrap">
+    <p class="sec-kicker">Our Story</p>
+    <div class="cols">
+      <div>
+        <h2>A trompo, a plancha, and a lot of pride.</h2>
+        <p>Tacos 801 started the way a lot of great taco spots do — a family cooking the food they grew up on and sharing it with the neighborhood. Today the trompo turns all day and the plancha never cools down.</p>
+        <p>We marinate our al pastor overnight, chop carnitas in small batches, and press every tortilla to order.</p>
+        <ul>
+          <li>Corn tortillas pressed fresh daily</li>
+          <li>Salsas made in-house every morning</li>
+          <li>Locals' favorite on Salt Lake's west side</li>
+        </ul>
+      </div>
+      <img src="images/trompo.webp" alt="Traditional trompo al pastor spinning under a heat lamp" loading="lazy" width="900" height="900">
+    </div>
+  </div>
+</section>
+
+<section class="reviews rv" id="reviews">
+  <div class="wrap">
+    <p class="sec-kicker">Reviews</p>
+    <h2>Salt Lake keeps coming back.</h2>
+    <div class="cols">
+      <div class="rcard">
+        <div class="g-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"The asada tacos taste like the ones I used to get from the truck on Redwood Road. Legit."</p>
+        <div class="who">Marcus T. <small>Glendale, Salt Lake City</small></div>
+      </div>
+      <div class="rcard">
+        <div class="g-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Worth the drive from West Valley. The horchata alone is worth the trip."</p>
+        <div class="who">Sonia M. <small>West Valley City</small></div>
+      </div>
+      <div class="rcard">
+        <div class="g-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Finally — real street tacos downtown. Fast, cheap, and the salsas have actual kick."</p>
+        <div class="who">Jake P. <small>Downtown SLC</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit rv" id="visit">
+  <div class="wrap">
+    <p class="sec-kicker">Find Us</p>
+    <div class="cols">
+      <div class="vinfo">
+        <h2>Right off 300 West.</h2>
+        <div class="vrow">
+          <span class="lab">Address</span>
+          <span class="val">1290 S 300 W, Salt Lake City, UT 84101</span>
+        </div>
+        <div class="vrow">
+          <span class="lab">Hours</span>
+          <span class="val">Monday – Saturday · 11 AM – 9 PM</span>
+        </div>
+        <div class="vrow">
+          <span class="lab">Call Ahead</span>
+          <a class="phone" href="tel:+18019060136">(801) 906-0136</a>
+        </div>
+        <div class="maplink">
+          <a href="https://www.google.com/maps/search/?api=1&query=Tacos+801+1290+S+300+W+Salt+Lake+City+UT">Get directions on Google Maps</a>
+        </div>
+        <p class="permit">Permitted &amp; inspected by the Salt Lake County Health Department.</p>
+      </div>
+      <form method="post" action="#" onsubmit="return false;" aria-label="Catering inquiry form">
+        <p class="intro">Catering or large orders?</p>
+        <div class="fld">
+          <label for="cname">Your name</label>
+          <input id="cname" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="fld">
+          <label for="cemail">Your email</label>
+          <input id="cemail" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="fld">
+          <label for="cevent">What's it for?</label>
+          <select id="cevent" name="event">
+            <option>Catering</option>
+            <option>Large pickup order</option>
+            <option>Food truck event</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="cmsg">Details</label>
+          <textarea id="cmsg" name="message" rows="3" placeholder="Date, headcount, anything else…"></textarea>
+        </div>
+        <button class="send" type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Tacos 801 · 1290 S 300 W, Salt Lake City, UT 84101</span>
+    <span><a href="tel:+18019060136">(801) 906-0136</a></span>
+    <span class="by">Demo site by SanoCo Marketing</span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('menuBtn').addEventListener('click',function(){
+  var n=document.getElementById('nav');
+  var open=n.classList.toggle('open');
+  this.setAttribute('aria-expanded',open?'true':'false');
+});
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
